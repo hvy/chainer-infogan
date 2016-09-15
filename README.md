@@ -6,21 +6,26 @@ Chainer implementations of *InfoGAN: Interpretable Representation Learning by In
 
 - c<sub>1</sub> ~ Cat(K = 10, p = 0.1)
 - c<sub>2</sub> ~ Unif(-1, 1)
-- c<sub>3<sub/> ~ Unif(-1, 1)
+- c<sub>3</sub> ~ Unif(-1, 1)
 
-10 categorical and 2 continuous codes are sampled and concatenated with 62 noise variables z and then fed into the generator.
-k
+10 categorical and 2 continuous codes are sampled and concatenated with 62 noise variables z and then fed into a generator. Following are sample images created by a generator trained for 100 epochs on the MNIST training dataset of 60000 samples.
 
 ### c<sub>1</sub> - 10 Categorical
+
+Each row represent a one-hot categorical vector. The network learn the latent representations of the 10 different digits with some exceptions such as the digit 1.
 
 <img src="./samples/c1_categorical.png" width="512px"/>
 
 ### c<sub>2</sub> - Continuous, Interpolation
 
+Interpolating over c<sub>2</sub> shows that the network learns to distinguish the width of the digit.
+
 <img src="./samples/c2_continuous_0.png" width="512px"/>
 <img src="./samples/c2_continuous_9.png" width="512px"/>
 
 ### c<sub>3</sub> - Continuous, Interpolation
+
+Interpolating over c<sub>3</sub> shows that the network learns the orientations.
 
 <img src="./samples/c3_continuous_0.png" width="512px"/>
 <img src="./samples/c3_continuous_9.png" width="512px"/>

@@ -102,7 +102,7 @@ if __name__ == '__main__':
             categorical_loss = F.softmax_cross_entropy(mi_categorical, categories, use_cudnn=False)
 
             # Continuous loss - Fix standard deviation to 1, i.e. log variance is 0
-            mi_continuous_ln_var = xp.empty_like(mi_continuous_mean, dtype=xp.float32)
+            mi_continuous_ln_var = xp.empty_like(mi_continuous_mean.data, dtype=xp.float32)
             mi_continuous_ln_var.fill(1)
             # mi_continuous_ln_var.fill(1e-6)
             continuous_loss = F.gaussian_nll(mi_continuous_mean, Variable(c_continuous), Variable(mi_continuous_ln_var))

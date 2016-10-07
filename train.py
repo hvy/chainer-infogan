@@ -8,7 +8,7 @@ from models import Generator, Discriminator
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--gpu', type=int, default=-1)
+    parser.add_argument('--gpu', type=int, default=1)
     parser.add_argument('--n-z', type=int, default=62)
     parser.add_argument('--n-categorical', type=int, default=10)
     parser.add_argument('--n-continuous', type=int, default=2)

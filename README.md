@@ -12,7 +12,7 @@ Chainer implementations of *InfoGAN: Interpretable Representation Learning by In
 
 ### c<sub>1</sub> - 10 Categorical
 
-Each row shows 10 random images generated from the same one-hot categorical vector. K = 10 and hence such 10 rows, one for each categorical code. The network learn the latent representations of the 10 different digits with some exceptions such as the digit 1.
+Each row shows 10 random images generated from the same one-hot categorical vector. K = 10 and hence such 10 rows, one for each categorical code. The network learns the latent representations of the 10 different digits with some exceptions such as the digit 1.
 
 <img src="./samples/c1_categorical.png" width="512px"/>
 
